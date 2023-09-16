@@ -4,11 +4,14 @@ import Rout from "./Rout";
 export const ContextData = createContext()
 function App() {
   const [postDatas, setPostDatas] = useState([])
+  const [loader,setLoader] = useState(true)
 
   useEffect(() =>{
     fetch("https://instagram-9a517-default-rtdb.firebaseio.com/post.json")
     .then(res => res.json())
-    .then(datas=> setPostDatas(...postDatas, Object.values(datas)))
+    .then(datas=> {setPostDatas(...postDatas, Object.values(datas))
+      setLoader(false)
+    })
   },[])
 
 
@@ -108,7 +111,9 @@ function App() {
   const values = {
     data,
     postDatas,
-    setPostDatas
+    setPostDatas,
+    loader,
+    setLoader
   }
 
   return (

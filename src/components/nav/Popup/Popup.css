@@ -1,5 +1,5 @@
 .popup{
-    position: absolute;
+    position: fixed;
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.47);
     width: 100%;
@@ -25,7 +25,7 @@
 }
 
 .close{
-    position: absolute;
+    position: fixed;
     right: 10px;
     top: 10px;
     font-size: 30px;
@@ -148,6 +148,6 @@ textarea{
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background:url(https://i.pinimg.com/236x/ba/f8/39/baf8390b6cd0f96d448aab467a7448d6.jpg) ;
+    overflow: hidden;
     background-size: cover;
 }

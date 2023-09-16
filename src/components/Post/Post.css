@@ -37,7 +37,7 @@
 .postHeaderProfilImg{
     width: 30px;
     height: 30px;
-    background-color: blue;
+    /* background-color: blue; */
     border-radius: 50%;
     overflow: hidden;
 }
@@ -52,7 +52,7 @@
 .postImg{
     height: 85%;
     width: 100%;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.866);
     display: flex;
     justify-content: center;
 }
@@ -60,7 +60,7 @@
 .postImg img{
     height: 100%;
     margin: auto;
-    width: 100%;
+    width: auto;
     object-fit: contain;
 }
 

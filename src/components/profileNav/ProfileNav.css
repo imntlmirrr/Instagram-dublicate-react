@@ -1,0 +1,104 @@
+.profileNavs{
+    /* height: 100vh; */
+    width: 100%;
+    display: grid;
+    place-items: center;
+    > .profilecontainer{
+        width: 75%;
+        height: 90%;
+        >.profileTop{
+            padding: 10px 0;
+            display: flex;
+            gap: 100px;
+            width: 85%;
+            margin: auto;
+            >.profileNavImg{
+                width: 150px;
+                height: 150px;
+                overflow: hidden;
+                border-radius: 50%;
+                >img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            >.profileNavAbout{
+                >.profileNavAboutTop{
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    >.profileNavAboutTopRight{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        >p{
+                            display: flex;
+                            align-items: center;
+                            padding: 7px 15px;
+                            border-radius: 7px;
+                            background: #EFEFEC;
+                            font-weight: 600;
+                            font-size: 14px;
+                            transition: .5s;
+                            cursor: pointer;
+                        }
+                        >p:hover{
+                            background: #dbdbd9;
+                        }
+                    }
+                }
+                >.profileNavAboutFollowers{
+                    margin-top: 20px;
+                    display: flex;
+                    gap: 40px;
+                    >p{
+                        >span{
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+        >.profileBottom{
+            padding: 40px 0;
+            width: 92%;
+            margin: auto;
+            >.addNew{
+                >.addNewsFlex{
+                    width: 10%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 12px;
+                    font-weight: 600;
+                    >.addNews{
+                        background: #f9faf6;
+                        display: grid;
+                        place-items: center;
+                        width: 87px;
+                        height: 87px;
+                        border: 1px solid #dbdbd7;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+        >.profileSavePost{
+            display: flex;
+            gap: 80px;
+            align-items: center ;
+            justify-content: center;
+            >.profileLinks{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                >p{
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

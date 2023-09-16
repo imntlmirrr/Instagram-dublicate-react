@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { BsThreeDots } from 'react-icons/bs';
+import profilesPicture from '../../img/elmir2.webp'
 
 
 function PostItem({ img, comment, name }) {
@@ -16,8 +17,8 @@ function PostItem({ img, comment, name }) {
         <div style={{display:'flex',flexDirection:"column"}} className="postItem">
             <div className="postHeader">
                 <div className="postHeaderLeft">
-                    <div className="postHeaderProfilImg"><img src="https://i.pinimg.com/236x/86/18/6f/86186f749b6ba5c82a676086c5229be2.jpg" /></div>
-                    <div className="postHeaderText">{name}</div>
+                    <div className="postHeaderProfilImg"><img src={name=='imnotlmirrr'?profilesPicture:'https:i.pinimg.com/236x/86/18/6f/86186f749b6ba5c82a676086c5229be2.jpg'} /></div>
+                    <div className="postHeaderText" style={{fontWeight:'600'}} >{name}</div>
                 </div>
                 <div className="headersRight"><BsThreeDots /></div>
             </div>
@@ -40,7 +41,7 @@ function PostItem({ img, comment, name }) {
                 <p style={{fontWeight:'600',fontSize:'15px'}}>{name}</p>
                 <p style={{marginBottom:'2.5px'}} >{comment}</p>
                 </div>
-            <div style={{marginTop:'5px',color:'#737372'}} >View all comments</div>
+            <div style={{marginTop:'5px',color:'#737372',cursor:'pointer'}} >View all comments</div>
         </div>
     )
 }

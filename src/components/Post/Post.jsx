@@ -1,16 +1,27 @@
-import React, { useContext } from 'react'
-import "./Post.css"
+import React, { useContext } from 'react';
+import './Post.css';
 import PostItem from './PostItem';
 import { ContextData } from '../../App';
+import { InfinitySpin } from 'react-loader-spinner'
 
 function Post() {
-    const { postDatas, setPostDatas } = useContext(ContextData)
+    const { postDatas, loader } = useContext(ContextData);
+    console.log(postDatas, 'postDatas');
 
     return (
         <div className='post'>
-            {postDatas.reverse().map(item=>  <PostItem {...item}/> )}
+            {loader ? (
+                <div style={{ width: '100%', height: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }} >
+                    <InfinitySpin
+                        width='200'
+                        color="rgb(131,58,180)"
+                    />
+                </div>
+            ) : (
+                postDatas.reverse().map((item) => <PostItem key={item.id} {...item} />)
+            )}
         </div>
-    )
+    );
 }
 
-export default Post
+export default Post;
