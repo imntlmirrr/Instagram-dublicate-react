@@ -6,8 +6,6 @@ import { InfinitySpin } from 'react-loader-spinner'
 
 function Post() {
     const { postDatas, loader } = useContext(ContextData);
-    console.log(postDatas, 'postDatas');
-
     return (
         <div className='post'>
             {loader ? (
@@ -18,7 +16,7 @@ function Post() {
                     />
                 </div>
             ) : (
-                postDatas.reverse().map((item) => <PostItem key={item.id} {...item} />)
+                postDatas.map((item) => <PostItem key={item.id} {...item}  />)
             )}
         </div>
     );

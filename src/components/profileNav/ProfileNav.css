@@ -1,13 +1,13 @@
 .profileNavs{
     /* height: 100vh; */
     width: 100%;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
     > .profilecontainer{
         width: 75%;
         height: 90%;
         >.profileTop{
-            padding: 10px 0;
+            padding: 25px 0;
             display: flex;
             gap: 100px;
             width: 85%;
@@ -91,14 +91,21 @@
             gap: 80px;
             align-items: center ;
             justify-content: center;
-            >.profileLinks{
-                display: flex;
-                align-items: center;
-                gap: 5px;
-                >p{
-                    font-weight: 600;
-                }
-            }
+            
         }
+    }
+}
+
+.profileLinks{
+    color: #737372;
+    margin-bottom:20px ;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    >p{
+        font-weight: 600;
+    }
+    >svg{
+        margin-top: 2px;
     }
 }

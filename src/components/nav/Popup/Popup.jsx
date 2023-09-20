@@ -7,7 +7,7 @@ import ProfilePicture from "../../../img/elmir2.webp"
 
 
 function Popup({ popup, setPopup }) {
-    const { postDatas, setPostDatas,setLoader } = useContext(ContextData)
+    const { postDatas, setPostDatas,setLoader,kayd } = useContext(ContextData)
     const [base64Img, setBase64img] = useState("")
     const [commentWidth, setCommentWidth] = useState(false)
     const [commentValue, setCommentValue] = useState("")
@@ -56,12 +56,12 @@ function Popup({ popup, setPopup }) {
         setBase64img("")
         setCommentValue("")
 
-        fetch("https://instagram-9a517-default-rtdb.firebaseio.com/post.json", {
+        fetch("https://elmir-50255-default-rtdb.firebaseio.com/post.json", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ name: "imnotlmirrr", img: base64Img, comment: commentValue }),})
+            body: JSON.stringify({ name: "imnotlmirrr", img: base64Img, comment: commentValue ,id:Date.now(),save:kayd}),})
             .then(()=>{
                 setLoader(false);
             })

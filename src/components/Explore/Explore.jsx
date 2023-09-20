@@ -5,14 +5,6 @@ import { ContextData } from '../../App'
 
 function Explore() {
     const { data } = useContext(ContextData)
-
-    // const [exploreData, setExploreData] = useState([])
-    // useEffect(() => {
-    //     axios
-    //         .get("https://jsonplaceholder.typicode.com/photos")
-    //         .then(res => setExploreData(res.data))
-    // }, [])
-    // console.log(exploreData);
     return (
         <div className='exploreAll'>
             <div className='explore'>

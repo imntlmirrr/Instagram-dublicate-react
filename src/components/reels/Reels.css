@@ -1,0 +1,64 @@
+.reels{
+    width: 100%;
+    padding: 35px 0;
+}
+.reels .reelsPost{
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+    width: 35%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+}
+.reels .reelsPost .reelsVideo{
+    height: 100%;
+    width: 85%;
+    border-radius: 5px;
+    overflow: hidden;
+    >.reelsVideos{
+        width: 100%;
+        height: 100%;
+        >img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.reels .reelsPost .reelsAbout{
+    height: 100%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.reels .reelsPost .reelsAbout .reelsAbout2{
+    padding: 5px 0;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reels .reelsPost .reelsAbout .reelsAbout2 .reelsAboutTop{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.reels .reelsPost .reelsAbout .reelsAbout2 .reelsAboutBottom .reelsProfileImg{
+    width: 24px;
+    height: 24px;
+    border: .5px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+    >img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
